@@ -53,10 +53,10 @@ cat ./my_pipeline/transformation_2/Dockerfile
 b. build images
 ```bash
 docker build -t darianharrison89/my-transform1:0.0.0 --build-arg http_proxy=http://web-proxy.corp.hpecorp.net:8080 --build-arg HTTPS_PROXY=http://web-proxy.corp.hpecorp.net:8080 ./my_pipeline/transformation_1/
-# docker build -t darianharrison89/my-pipeline:0.0.0 .
+# docker build -t darianharrison89/my-pipeline:0.0.0 ./my_pipeline/transformation_1/
 
 docker build -t darianharrison89/my-transform2:0.0.0 --build-arg http_proxy=http://web-proxy.corp.hpecorp.net:8080 --build-arg HTTPS_PROXY=http://web-proxy.corp.hpecorp.net:8080 ./my_pipeline/transformation_2/
-# docker build -t darianharrison89/my-pipeline:0.0.0 .
+# docker build -t darianharrison89/my-pipeline:0.0.0 ./my_pipeline/transformation_2/
 ```
 
 c. push new pipeline images
@@ -99,7 +99,7 @@ a. on UI
 to execute, simply do 
 ```
 > create experiment
-> upload compressed file or paste http:// reference
+> create pipeline > upload compressed file or paste http:// reference
 > Create Run > Choose experiment
 > run pipieline
 ```
