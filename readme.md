@@ -67,17 +67,18 @@ docker push darianharrison89/my-transform2:0.0.0
 
 ## 3. DEVELOP COMPONENTS.YAML
 
-a.  Write a component specification in YAML format that describes the component for the Kubeflow Pipelines system.
-```bash
-cat ./my_pipeline/pipeline.py
-```
-
-b. Use the Kubeflow Pipelines SDK to load your component, use it in a pipeline and run that pipeline.
+a. Use the Kubeflow Pipelines SDK to load your component, use it in a pipeline and run that pipeline.
 
 ```bash
 cat ./my_pipeline/transformation_1/component.yaml
 cat ./my_pipeline/transformation_2/component.yaml
 ```
+
+b.  Write a component specification in YAML format that describes the component for the Kubeflow Pipelines system.
+```bash
+cat ./my_pipeline/pipeline.py
+```
+
 
 ## 4. COMPILE THE JOB EXECUTION DAG
 

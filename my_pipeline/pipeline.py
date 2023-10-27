@@ -6,11 +6,11 @@ import kfp.components as components
 
 def generic_pipeline(transform_1_input1: str, param_1: int):
 
-  # simple_op = components.load_component_from_url('http://10.163.168.140/staticfiles/transformation_1/component.yaml') # if we decide to serve this file from online source
+  # transform_1 = components.load_component_from_url('http://10.163.168.140/staticfiles/transformation_1/component.yaml') # if we decide to serve this file from online source
   transform_1 = components.load_component_from_file('./my_pipeline/transformation_1/component.yaml')
   transform_1_step = transform_1(transform_1_input1=transform_1_input1, param_1=param_1) # pass in param
 
-  # simple_op = components.load_component_from_url('http://10.163.168.140/transformation_2/component.yaml') # if we decide to serve this file from online source
+  # transform_2 = components.load_component_from_url('http://10.163.168.140/transformation_2/component.yaml') # if we decide to serve this file from online source
   transform_2 = components.load_component_from_file('./my_pipeline/transformation_2/component.yaml')
   transform_2_step = transform_2(transform_2_input1= '%s' % transform_1_step.outputs['transform_1_output1']) # pass in param
 

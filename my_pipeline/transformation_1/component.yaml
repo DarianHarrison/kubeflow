@@ -7,7 +7,7 @@ outputs:
   - {name: transform_1_output1, type: String, description: ''} # specify the data produced by your component
 implementation:
   container:
-    image: darianharrison89/my-transform1:0.0.0
+    image: darianharrison89/my-transform1:0.0.1
     command: [ 'python3', 'transform_1.py' ]
     args: [ '--transform_1_input1', {inputValue: transform_1_input1}, # because we are usingnthe string in the function to read local file
             '--param_1', {inputValue: param_1},
