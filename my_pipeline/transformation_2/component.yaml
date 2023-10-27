@@ -6,7 +6,7 @@ outputs:
   - {name: transform_2_output1, type: String, description: ''}
 implementation:
   container:
-    image: darianharrison89/l10-transform2:0.3.4
+    image: darianharrison89/my-transform2:0.0.0
     command: [ 'python3', 'transform_2.py' ]
     args: [ '--transform_2_input1', {inputPath: transform_2_input1},
             '--transform_2_output1', {outputPath: transform_2_output1},
