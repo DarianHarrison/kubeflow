@@ -1,0 +1,15 @@
+name: First Transformation
+description: read and write files
+inputs:
+  - {name: transform_1_input1, type: String, default: 'in.txt', description: ''} # specify the data consumed by your component
+  - {name: param_1, type: Integer, default: '100', description: ''} 
+outputs:
+  - {name: transform_1_output1, type: String, description: ''} # specify the data produced by your component
+implementation:
+  container:
+    image: darianharrison89/l10-transform1:0.3.4
+    command: [ 'python3', 'transform_1.py' ]
+    args: [ '--transform_1_input1', {inputValue: transform_1_input1}, # because we are usingnthe string in the function to read local file
+            '--param_1', {inputValue: param_1},
+            '--transform_1_output1', {outputPath: transform_1_output1} # outputPath keyword container argument
+          ]

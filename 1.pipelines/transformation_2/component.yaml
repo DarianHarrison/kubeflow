@@ -1,0 +1,13 @@
+name: Second Transformation
+description: read and write files 2
+inputs:
+  - {name: transform_2_input1, type: InputPath, description: ''}
+outputs:
+  - {name: transform_2_output1, type: String, description: ''}
+implementation:
+  container:
+    image: darianharrison89/l10-transform2:0.3.4
+    command: [ 'python3', 'transform_2.py' ]
+    args: [ '--transform_2_input1', {inputPath: transform_2_input1},
+            '--transform_2_output1', {outputPath: transform_2_output1},
+          ]
