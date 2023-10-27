@@ -86,6 +86,7 @@ Compile the pipeline to generate a compressed YAML definition of the pipeline.
 a. compile and serve pipeline
 ```bash
 dsl-compile --py ./my_pipeline/pipeline.py --output my-pipeline-0.0.0.tar.gz
+ls
 # cp my-pipeline-0.0.0.tar.gz /var/www/html/staticfiles (optional)
 ```
 
