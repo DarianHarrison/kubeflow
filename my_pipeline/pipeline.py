@@ -2,7 +2,7 @@
 import kfp.dsl as dsl
 import kfp.components as components
 
-@dsl.pipeline(name='l10-pipeline-0.3.4', description='Lion10 chained pipelines')
+@dsl.pipeline(name='my-pipeline-0.0.0', description='Chained pipelines')
 
 def generic_pipeline(transform_1_input1: str, param_1: int):
 
