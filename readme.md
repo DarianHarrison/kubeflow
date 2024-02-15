@@ -19,14 +19,14 @@
 ```bash
 docker --version
 ```
- d. Pyhton3 (preferably 3.8 or later) and Python Package Manager (pip3)
+ d. Pyhton3 and Python Package Manager (pip3)
 ```bash
-python3 --version
-pip3 --version
+python3 --version # (tested on python 3.6.8)
+pip3 --version # 
 ```
 e. SDK
 ```bash
-pip3 install kfp
+pip3 install kfp==1.8.0 # only works for V1 API for now
 pip3 install requests
 pip3 install kfp-server-api 
 ```
