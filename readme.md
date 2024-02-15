@@ -13,13 +13,13 @@
 
 ## 0. PREREQUISITES
 
-a. Kubernetes cluster
-b. Kubeflow installed on Kubernetes Cluster
-c. Docker
+ a. Kubernetes cluster
+ b. Kubeflow installed on Kubernetes Cluster
+ c. Docker
 ```bash
 docker --version
 ```
-d. Pyhton3 and Python Package Manager (pip3)
+ d. Pyhton3 (preferably 3.8 or later) and Python Package Manager (pip3)
 ```bash
 python3 --version
 pip3 --version
